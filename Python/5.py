@@ -7,7 +7,7 @@
 # => output = 3
 x,num = [2, 5, 3, 4, 5 , 2],5
 def min_dist(x,num):
-    import random
+    import random #[5,2,3,2,5,1,5,2,3,2,5]
     lst_,lst_rnd=[],[]
     min_,f = 9999,0
     if x.count(num) == 1:
@@ -22,7 +22,6 @@ def min_dist(x,num):
                 lst_.append(i)
         for i in lst_rnd[:(len(lst_rnd))-1]:
                     min_ = min((lst_.index(lst_rnd[lst_rnd.index(i)+1])) - lst_.index(i),min_)
-        x[:(len(x)-1)].reverse()
         f += 1
     return min_
 print(min_dist(x,num))
