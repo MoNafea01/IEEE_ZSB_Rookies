@@ -14,8 +14,8 @@ def min_dist(x,num):
     for i in x:
         if i==num :
             n=random.random()
-            lst_.append(n)  #[173652164,5,3,4,512648153215,5]
-            lst_rnd.append(n) #[173652164,512648153215,2174385324]
+            lst_.append(n)
+            lst_rnd.append(n)
         else:
             lst_.append(i)
     for i in lst_rnd[:(len(lst_rnd))-1]:
