@@ -22,6 +22,6 @@ def min_dist(x,num):
                 lst_.append(i)
         for i in lst_rnd[:(len(lst_rnd))-1]:
                     min_ = min((lst_.index(lst_rnd[lst_rnd.index(i)+1])) - lst_.index(i),min_)
-        x.reverse()
+        x[:(len(x)-1)].reverse()
         f+=1
     return min_
