@@ -12,6 +12,8 @@ def min_dist(x,num):
     lst_rnd=[]
     min_=9999
     f=0
+    if x.count(num)== 1:
+         return 0
     while f<2:
         for i in x:
             if i==num :
