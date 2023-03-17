@@ -11,13 +11,17 @@ def min_dist(x,num):
     lst_=[]
     lst_rnd=[]
     min_=9999
-    for i in x:
-        if i==num :
-            n=random.random()
-            lst_.append(n)
-            lst_rnd.append(n)
-        else:
-            lst_.append(i)
-    for i in lst_rnd[:(len(lst_rnd))-1]:
-                min_ = min((lst_.index(lst_rnd[lst_rnd.index(i)+1])) - lst_.index(i),min_)
+    f=0
+    while f<2:
+        for i in x:
+            if i==num :
+                n=random.random()
+                lst_.append(n)
+                lst_rnd.append(n)
+            else:
+                lst_.append(i)
+        for i in lst_rnd[:(len(lst_rnd))-1]:
+                    min_ = min((lst_.index(lst_rnd[lst_rnd.index(i)+1])) - lst_.index(i),min_)
+        x.reverse()
+        f+=1
     return min_
